@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<form method="POST" action="get_article/" style="align:center">
+    {% csrf_token %}
+    {{ form_art.as_p }}
+    <button type="submit" class="save btn btn-default">Send article</button>
+</form>
+
+<br>
+
+<form method="POST" action="get_file/" enctype="multipart/form-data" accept-charset=".xlsx">
+    {% csrf_token %}
+    {{ form_file.as_p }}
+    <button type="submit" class="save btn btn-default">Send file</button>
+</form>
+
+{% endblock %}
