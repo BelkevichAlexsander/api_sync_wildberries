@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```
 ## Удаление БД, запуск миграций
 ```bash
-rm headliner.sqlite3
+rm db.sqlite3
 python3 manage.py makemigrations                 
 python3 manage.py migrate
 ```
